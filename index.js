@@ -45,6 +45,10 @@ const upload = multer({
   fileFilter:multerFilter
 });
 
+app.get('/',(req,res) => {
+  res.redirect('/upload')
+})
+
 app.get('/upload',(req,res) => {
   res.render('form')
 })
